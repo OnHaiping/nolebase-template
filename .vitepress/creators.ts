@@ -1,5 +1,5 @@
 export interface SocialEntry {
-  type: 'github' | 'twitter' | 'email'
+  type: 'github' | 'instagram' | 'email'
   icon: string
   link: string
 }
