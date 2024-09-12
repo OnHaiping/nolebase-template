@@ -1,5 +1,5 @@
 export interface SocialEntry {
-  type: 'github' | 'instagram' | 'email'
+  type: 'github' | 'twitter' | 'email'
   icon: string
   link: string
 }
@@ -20,30 +20,30 @@ const getAvatarUrl = (name: string) => `https://github.com/${name}.png`
 
 export const creators: Creator[] = [
   {
-    name: '王海平',
+    name: '絢香猫',
     avatar: '',
     username: 'nekomeowww',
-    title: '王海平',
-    desc: '开发者，专注于机器学习，数据分析，嵌入式，边缘计算，自动化',
+    title: 'Nólëbase 原始创作者',
+    desc: '开发者，专注于基础设施维护，数据分析，后端、DevOps 开发',
     links: [
-      { type: 'github', icon: 'github', link: 'https://github.com/OnHaiping' },
-      { type: 'Ins', icon: 'instagram', link: 'https://www.instagram.com/haipingnn/' },
+      { type: 'github', icon: 'github', link: 'https://github.com/nekomeowww' },
+      { type: 'twitter', icon: 'twitter', link: 'https://twitter.com/ayakaneko' },
     ],
-    nameAliases: ['Onhaiping', '王海平', '王海平', 'Onhaiping', 'Onhaiping'],
-    emailAliases: ['a15066577233@gmail.com'],
+    nameAliases: ['nekomeowww', '绚香猫', '絢香猫', 'Neko Ayaka', 'Ayaka Neko'],
+    emailAliases: ['neko@ayaka.moe'],
   },
   {
-    name: '王海平',
+    name: '絢香音',
     avatar: '',
-    username: 'nekomeowww',
-    title: '王海平',
-    desc: '开发者，专注于机器学习，数据分析，嵌入式，边缘计算，自动化',
+    username: 'LittleSound',
+    title: 'Nólëbase 原始创作者',
+    desc: '开源开发者，专注于前端，以及前端相关工具库和工具链开发',
     links: [
-      { type: 'github', icon: 'github', link: 'https://github.com/OnHaiping' },
-      { type: 'Ins', icon: 'instagram', link: 'https://www.instagram.com/haipingnn/' },
+      { type: 'github', icon: 'github', link: 'https://github.com/LittleSound' },
+      { type: 'twitter', icon: 'twitter', link: 'https://twitter.com/OikawaRizumu' },
     ],
-    nameAliases: ['Onhaiping', '王海平', '王海平', 'Onhaiping', 'Onhaiping'],
-    emailAliases: ['a15066577233@gmail.com'],
+    nameAliases: ['LittleSound', '绚香音', '絢香音', 'Rizumu Oikawa', 'Rizumu Ayaka', 'Ayaka Rizumu', 'Rizumu'],
+    emailAliases: ['rizumu@ayaka.moe', 'rizumu@oqo.moe'],
   },
 ].map<Creator>((c) => {
   c.avatar = c.avatar || getAvatarUrl(c.username)
