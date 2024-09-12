@@ -2,11 +2,11 @@
 layout: home
 sidebar: false
 
-title: haiping
+title: HaipingBolgs
 titleTemplate: 海上生明月，天涯共此时
 
 hero:
-  name: Haiping
+  name: Tenacity
   text: 海上生明月，天涯共此时
   tagline: 来都来了，逛逛吧
   image:
@@ -20,8 +20,8 @@ hero:
       text: 我的协会网站
       link: https://bhchuangxin.site
     - theme: alt
-      text: Power BY nolebase
-      link: https://github.com/nolebase/nolebase
+      text: GitHub主页
+      link: https://github.com/onhaiping
 
 features:
   - title: 皆为 Markdown
