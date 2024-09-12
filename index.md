@@ -2,13 +2,13 @@
 layout: home
 sidebar: false
 
-title: Nólëbase
-titleTemplate: 记录回忆，知识和畅想的地方
+title: haiping
+titleTemplate: 海上生明月，天涯共此时
 
 hero:
   name: g~Nj$3J2^
-  text: 记录回忆，知识和畅想的地方
-  tagline: 以 Nólëbase 为名，读作 nole-base，取自意为「知识」的昆雅语 nólë 和意为「基础」的英文 base，即「知识库」
+  text: 海上生明月，天涯共此时
+  tagline: 以 haiping 为名，读作 nole-base，取自意为「知识」的昆雅语 nólë 和意为「基础」的英文 base，即「知识库」
   image:
     src: /logo.svg
     alt: Vitest
@@ -17,10 +17,10 @@ hero:
       text: 开始阅读
       link: /笔记/index
     - theme: alt
-      text: 加入 Discord 服务器
-      link: https://discord.gg/XuNFDcDZGj
+      text: 我的协会网站
+      link: https://bhchuangxin.site
     - theme: alt
-      text: GitHub 上浏览
+      text: Power BY nolebase
       link: https://github.com/nolebase/nolebase
 
 features:
