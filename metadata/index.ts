@@ -1,5 +1,5 @@
 /** 文本 */
-export const siteName = 'haiping'
+export const siteName = 'Nólëbase'
 export const siteShortName = 'haiping'
 export const siteDescription = '海上生明月，天涯共此时'
 
