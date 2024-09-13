@@ -93,6 +93,7 @@ html, body {
 /* 首页标题样式 */
 .VPHomeHero > .container > .main > h1 {
   font-size: 5rem;
+  width: 1000px;
   font-family: 'tengwarannatar-bold';
 }
 
