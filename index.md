@@ -8,8 +8,7 @@ titleTemplate: 海上生明月，天涯共此时
 hero:
   name: Tenacity
   text: 天涯共此时。
-  tagline1: 人生不如意十之八九，可与人言无二三。
-  tagline2: 来都来了，逛逛吧。
+  tagline: 人生不如意十之八九，可与人言无二三。这里大于二三。
   actions:
     - theme: brand
       text: 开始阅读
