@@ -2,8 +2,8 @@
 
 ## 王海平的知识库
 
-欢迎来的王海平的知识库 [haiping](https://nolebase.ayaka.io)，这里是 📒 笔记分区
+欢迎来的王海平的知识库 [haiping](https://haipingblog.vercel.app/)，这里是 📒 笔记分区
 
-很高兴你对 [haiping](https://nolebase.ayaka.io) 感兴趣！
+很高兴你对**知识**感兴趣！
 
 专注于提升自己，如果我的笔记对你有所帮助，我很高兴！
