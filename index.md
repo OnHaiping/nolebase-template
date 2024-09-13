@@ -9,9 +9,6 @@ hero:
   name: Tenacity
   text: 海上生明月，天涯共此时
   tagline: 来都来了，逛逛吧
-  image:
-    src: /logo.svg
-    alt: Vitest
   actions:
     - theme: brand
       text: 开始阅读
