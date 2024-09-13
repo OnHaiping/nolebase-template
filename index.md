@@ -1,6 +1,6 @@
 ---
 layout: home
-sidebar: false
+sidebar: true
 
 title: HaipingBolgs
 titleTemplate: 海上生明月，天涯共此时

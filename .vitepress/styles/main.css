@@ -112,6 +112,7 @@ html, body {
   /* 首页标题样式 */
   .VPHomeHero > .container > .main > h1 {
     font-size: 3.5rem;
+    width: 1000px;
   }
 
   /* 首页子标题样式 */
@@ -132,6 +133,7 @@ html, body {
   /* 首页标题样式 */
   .VPHomeHero > .container > .main > h1 {
     font-size: 2.5rem;
+    width: 1000px;
   }
 
   /* 首页子标题样式 */
