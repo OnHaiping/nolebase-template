@@ -127,7 +127,7 @@ html, body {
 }
 
 /* 自适应样式 */
-@media (max-width: 640px) {
+@media (max-width: 1040px) {
   /* 首页标题样式 */
   .VPHomeHero > .container > .main > h1 {
     font-size: 2.5rem;
