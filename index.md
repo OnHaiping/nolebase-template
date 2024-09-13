@@ -7,8 +7,8 @@ titleTemplate: 海上生明月，天涯共此时
 
 hero:
   name: Tenacity
-  text: 海上生明月，天涯共此时
-  tagline: 来都来了，逛逛吧
+  text: 天涯共此时。
+  tagline: 人生不如意十之八九，可与人言无二三。来都来了，逛逛吧
   actions:
     - theme: brand
       text: 开始阅读
