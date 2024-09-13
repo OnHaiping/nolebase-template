@@ -116,6 +116,7 @@ html, body {
 
   /* 首页子标题样式 */
   .VPHomeHero > .container > .main > .text {
+    width: 1000px;
     padding-top: 30px;
     font-size: 3rem;
   }
@@ -135,6 +136,7 @@ html, body {
 
   /* 首页子标题样式 */
   .VPHomeHero > .container > .main > .text {
+    width: 1000px;
     padding-top: 20px;
     font-size: 2rem;
   }
