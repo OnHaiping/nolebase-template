@@ -48,7 +48,7 @@ html, body {
 }
 
 /* fix height: one card per row */
-@media (max-width: 568px) {
+@media (max-width: 1000px) {
   .VPTeamMembersItem.small .profile .data .affiliation {
     min-height: unset;
   }
