@@ -12,7 +12,7 @@ import TagsAlias from '../.vitepress/docsTagsAlias.json'
 import type { ArticleTree, DocsMetadata, DocsTagsAlias, Tag } from './types/metadata'
 
 const dir = './'
-const targets = ['笔记/','生活/']
+const target = '笔记/'
 const folderTop = true
 
 export const DIR_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
@@ -49,7 +49,6 @@ export async function listPages(dir: string, options: { target?: string, ignore?
   return files
 }
 
-
 /**
  * 添加和计算路由项
  * @param indexes 路由树
@@ -57,7 +56,7 @@ export async function listPages(dir: string, options: { target?: string, ignore?
  * @param upgradeIndex 是否升级 index
  * @returns 路由树
  */
-async function addRouteItem(indexes: ArticleTree[], path: string, target, upgradeIndex = false,) {
+async function addRouteItem(indexes: ArticleTree[], path: string, upgradeIndex = false) {
   const suffixIndex = path.lastIndexOf('.')
   const nameStartsAt = path.lastIndexOf('/') + 1
   const title = path.slice(nameStartsAt, suffixIndex)
@@ -131,9 +130,9 @@ function addRouteItemRecursion(indexes: ArticleTree[], item: any, path: string[]
  * @param docs 符合 glob 的文件列表
  * @param docsMetadata docsMetadata.json 的内容
  */
-async function processSidebar(docs: string[], docsMetadata: DocsMetadata, target) {
+async function processSidebar(docs: string[], docsMetadata: DocsMetadata) {
   await Promise.all(docs.map(async (docPath: string) => {
-    await addRouteItem(docsMetadata.sidebar, docPath, target)
+    await addRouteItem(docsMetadata.sidebar, docPath)
   }))
 }
 
@@ -342,7 +341,7 @@ async function processDocs(docs: string[], docsMetadata: DocsMetadata) {
   }))
 }
 
-async function run(target) {
+async function run() {
   let now = (new Date()).getTime()
   const docs = await listPages(dir, { target })
   console.log('listed pages in', `${(new Date()).getTime() - now}ms`)
@@ -354,7 +353,7 @@ async function run(target) {
   console.log('processed docs in', `${(new Date()).getTime() - now}ms`)
   now = (new Date()).getTime()
 
-  await processSidebar(docs, docsMetadata, target)
+  await processSidebar(docs, docsMetadata)
   console.log('processed sidebar in', `${(new Date()).getTime() - now}ms`)
   now = (new Date()).getTime()
 
@@ -364,33 +363,7 @@ async function run(target) {
   await fs.writeJSON(join(DIR_VITEPRESS, 'docsMetadata.json'), docsMetadata, { spaces: 2 })
 }
 
-// async function run() {
-//   let now = (new Date()).getTime()
-//   const docs = await listPages(dir, { target: targets.join('|') })
-//   const docsMetadata: DocsMetadata = { sidebar: [] }
-
-//   await processDocs(docs, docsMetadata)
-//   console.log('processed docs in', `${(new Date()).getTime() - now}ms`)
-//   now = (new Date()).getTime()
-
-//   await processSidebar(docs, docsMetadata)
-//   console.log('processed sidebar in', `${(new Date()).getTime() - now}ms`)
-//   now = (new Date()).getTime()
-
-//   docsMetadata.sidebar = sidebarSort(docsMetadata.sidebar, folderTop)
-//   console.log('processed sidebar sort in', `${(new Date()).getTime() - now}ms`)
-
-//   await fs.writeJSON(join(DIR_VITEPRESS, 'docsMetadata.json'), docsMetadata, { spaces: 2 })
-// }
-
-// 添加主函数，用来遍历所有的 target
-async function main() {
-  for (const target of targets) {
-    await run(target)
-  }
-}
-
-main().catch((err) => {
+run().catch((err) => {
   console.error(err)
   process.exit(1)
 })
