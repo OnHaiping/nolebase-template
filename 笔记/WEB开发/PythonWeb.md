@@ -3594,11 +3594,9 @@ tag.innerText = "xxx"
 
 ### 6.7知识总结
 
-'
-
 - 数据类型
 
-  ```ht	ml
+```html
   常见的数据类型：int bool str list tuple dict set float None
   	- 哪些转化弄成布尔类型为 False: 空 None 0
   	- 可变和不可变划分，可变的有哪些:list set dict
@@ -3617,13 +3615,13 @@ tag.innerText = "xxx"
   	- dict
   		- 独有功能：get keys items values
   		- 公共功能：len / 索引 / 切片 / for循环 / 判断是否包含
-  ```
+```
 
   
 
 - 函数编程
 
-  ```html
+```html
   函数的基础指数：
   	- 定义
   	- 参数、概念：位置传参 / 关键字传参 / 参数默认值 / 动态参数 *args **kwargs
@@ -3644,11 +3642,11 @@ tag.innerText = "xxx"
   		- a / ab 追加			【文件不存在 自动创建】			 【文件不存在，报错】
   
   		注意：os.mkdirs / os,path.exsits 是否存在 不存在 创建新建目录
-  ```
+```
 
 - 模块
 
-  ```html
+```html
   模块的分类：
   	- 自定义模块
   		- os.path 导入模块时 python 内部都回去那个目录先
@@ -3669,18 +3667,18 @@ tag.innerText = "xxx"
   	- 源码
   	- wheel 包
   
-  ```
+```
 
 - 面向对象
 
-  ```htl
+```
   目标：不是为了用面向对象编程
   面向对象三大特性：封装	继承	多态
-  ```
+```
 
 - 前端开发
 
-  ```html
+```html
   - 前端知识分为三部分：
   	- HTML 标签具有模式特点
   	- CSS  修改标签的特点
@@ -3705,7 +3703,7 @@ tag.innerText = "xxx"
   	- 背景颜色
   	- hover 鼠标放上去就会触发 CSS 的样式。
   	
-  ```
+```
 
 ## 7. JQuery
 
