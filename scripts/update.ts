@@ -12,7 +12,7 @@ import TagsAlias from '../.vitepress/docsTagsAlias.json'
 import type { ArticleTree, DocsMetadata, DocsTagsAlias, Tag } from './types/metadata'
 
 const dir = './'
-const target = ['笔记/','生活/']
+const targets = ['笔记/','生活/']
 const folderTop = true
 
 export const DIR_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
@@ -341,13 +341,32 @@ async function processDocs(docs: string[], docsMetadata: DocsMetadata) {
   }))
 }
 
+// async function run() {
+//   let now = (new Date()).getTime()
+//   const docs = await listPages(dir, { target })
+//   console.log('listed pages in', `${(new Date()).getTime() - now}ms`)
+//   now = (new Date()).getTime()
+
+//   const docsMetadata: DocsMetadata = { docs: [], sidebar: [], tags: [] }
+
+//   await processDocs(docs, docsMetadata)
+//   console.log('processed docs in', `${(new Date()).getTime() - now}ms`)
+//   now = (new Date()).getTime()
+
+//   await processSidebar(docs, docsMetadata)
+//   console.log('processed sidebar in', `${(new Date()).getTime() - now}ms`)
+//   now = (new Date()).getTime()
+
+//   docsMetadata.sidebar = sidebarSort(docsMetadata.sidebar, folderTop)
+//   console.log('processed sidebar sort in', `${(new Date()).getTime() - now}ms`)
+
+//   await fs.writeJSON(join(DIR_VITEPRESS, 'docsMetadata.json'), docsMetadata, { spaces: 2 })
+// }
+
 async function run() {
   let now = (new Date()).getTime()
-  const docs = await listPages(dir, { target })
-  console.log('listed pages in', `${(new Date()).getTime() - now}ms`)
-  now = (new Date()).getTime()
-
-  const docsMetadata: DocsMetadata = { docs: [], sidebar: [], tags: [] }
+  const docs = await listPages(dir, { target: targets.join('|') })
+  const docsMetadata: DocsMetadata = { sidebar: [] }
 
   await processDocs(docs, docsMetadata)
   console.log('processed docs in', `${(new Date()).getTime() - now}ms`)
@@ -363,7 +382,15 @@ async function run() {
   await fs.writeJSON(join(DIR_VITEPRESS, 'docsMetadata.json'), docsMetadata, { spaces: 2 })
 }
 
-run().catch((err) => {
+// 添加主函数，用来遍历所有的 target
+async function main() {
+  for (const target of targets) {
+    await syncTarget(target)
+  }
+  await run()
+}
+
+main().catch((err) => {
   console.error(err)
   process.exit(1)
 })
