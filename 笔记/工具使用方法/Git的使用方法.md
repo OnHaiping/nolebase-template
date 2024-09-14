@@ -6,7 +6,7 @@ comment: true
 
 初始化设置用户名和邮箱
 
-```git
+```
 git config --global user.name "Your Name"
 git config --global user.emal "email@mail.com"
 git config --global credential.helper store
@@ -14,7 +14,7 @@ git config --global credential.helper store
 
 查看当前配置
 
-```git
+```
 git config --global --list
 ```
 
@@ -112,31 +112,31 @@ git add .
 
 - 只提交 暂存区中的内容 不会提交工作区中的内容
 
-```git
+```
 git commit
 ```
 
 - 提交所有暂存区的文件到仓库  -m 是指定提交的信息
 
-```git
+```
 git commit -m "message"
 ```
 
 - 提交所有已修改的文件到仓库
 
-```git
+```
 git commit -am "message"
 ```
 
 - 撤回提交的文件
 
-```git
+```
 git rm --cached <file>
 ```
 
 查看提交日志
 
-```git
+```
 git log
 ```
 
@@ -251,8 +251,6 @@ git reset --soft <commit-id>
 git restore --staged <file>
 ```
 
-
-
 ### .gitignore忽略文件
 
 应该忽略哪些文件?
@@ -263,8 +261,6 @@ git restore --staged <file>
 - 涉及身份、密码、口令、密钥等敏感信息文件
 
 > 提交到 .gitignore 不能是已经被添加到版本库中的文件
-
-
 
 ### .gitignore文件的匹配规则
 
@@ -318,7 +314,6 @@ ssh 克隆工程 需要配置 ssh 密钥
 ![image-20240104151213166](https://imgtroage-1317162111.cos.ap-nanjing.myqcloud.com/img/image-20240104151213166.png)
 
 
-
 生成 SSH Key 
 
 ```
@@ -339,7 +334,6 @@ ssh-keygen -t rsa -b 4096
 将生成的 id_rsa.pub 复制到 Key中
 
 ![image-20240104151420241](https://imgtroage-1317162111.cos.ap-nanjing.myqcloud.com/img/image-20240104151420241.png)
-
 
 
 > 如果是之前配置过了，生成的时候 自己写一个文件的名字
@@ -367,8 +361,6 @@ git push <remote> <branch>
 ```
 git pull <remote>
 ```
-
-
 
 #### 关联远程仓库
 
@@ -401,8 +393,6 @@ git push -u origin main
 
 ![image-20240104153154812](https://imgtroage-1317162111.cos.ap-nanjing.myqcloud.com/img/image-20240104153154812.png)
 
-
-
 #### 拉取远程仓库内容
 
 ```
@@ -417,10 +407,7 @@ git pull <远程仓库名> <远程分支名>:<本地分支名>
 
 区别：fetch 命令只是获取远程仓库的修改，不会自动合并
 
-
-
 ## 分支
-
 
 
 **查看分支列表**
@@ -458,13 +445,11 @@ git switch <branchname>
 ```
 
 
-
 **恢复分支**
 
 ```
 git checkout -b <branch-name> <commit-id>
 ```
-
 
 
 **合并分支**
@@ -500,7 +485,6 @@ git merge --abort
 ```
 
 
-
 **查看分支图**
 
 ```
@@ -512,10 +496,6 @@ git log --graph --oneline --decorate --all
 ```
 alias graph="git log --oneline --graph --decorate --all" // 直接使用别名 graph 查看图形化提交记录
 ```
-
-
-
-
 
 **删除分支** 
 
@@ -545,9 +525,6 @@ git rebase <branch-name>
 如果在 main 分支上执行 rebase 操作，就找到 dev 分支和 main 分支共同的组件，也还是 main3 这个提交记录，然后 main 分支从共同祖先到最新提交记录的所有提交内容，也就是 main4 main5 ，都移动到 dev 分支的最新提交。
 
 ![image-20240104191446455](https://imgtroage-1317162111.cos.ap-nanjing.myqcloud.com/img/image-20240104191446455.png)
-
-
-
 
 
 Rebase 和 Merge 有什么区别，该如何区分使用？
