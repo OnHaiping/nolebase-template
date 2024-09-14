@@ -2,7 +2,7 @@
 tags: 
 comment: true
 ---
-# 搭建blogs但是成本低
+# 搭建blogs但是低成本
 
 [教程来源](https://juejin.cn/post/7301193497247727652)
 
@@ -89,9 +89,10 @@ Output Directory : .vitepress/dist
 
 购买完成之后需要来cloudflare进行注册，[CloudFlare](https://www.cloudflare.com/zh-cn/)
 完成之后进来会看到如下界面
-**![](imgs/Pasted%20image%2020240913211446.png)**
-然后点击右侧的这个 **添加站点** 按钮就好了，进入下一步，输入你要加的域名
-然后点击 **继续**：
+**![](imgs/Pasted%20image%2020240913211446.png)
+
+然后点击右侧的这个**添加站点**按钮就好了，进入下一步，输入你要加的域名
+然后点击**继续**：
 ![](imgs/Pasted%20image%2020240913211706.png)
 然后选择计划，一般无特殊需求直接白嫖然后点击继续：
 ![](imgs/Pasted%20image%2020240913211736.png)
