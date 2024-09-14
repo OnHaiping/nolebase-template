@@ -2,7 +2,7 @@
 
 ## 王海平的知识库
 
-欢迎来的王海平的知识库 [haiping](https://haipingblog.vercel.app/)，这里是 📒 笔记分区
+欢迎来的王海平的知识库 [haiping](https://haipingblogs.top/)，这里是 📒 笔记分区
 
 很高兴你对**知识**感兴趣！
 
