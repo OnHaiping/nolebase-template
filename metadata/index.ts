@@ -1,5 +1,5 @@
 /** 文本 */
-export const siteName = '王海平的个人博客知识库'
+export const siteName = '王海平的个人知识库'
 export const siteShortName = 'Tenacity'
 export const siteDescription = '海上生明月，天涯共此时'
 
