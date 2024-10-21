@@ -1,9 +1,0 @@
-{
-	"nodes":[
-		{"id":"bbe9d3f90d331f82","x":100,"y":-280,"width":250,"height":60,"type":"text","text":"Nihao"},
-		{"id":"e3b0588c45687888","x":-200,"y":-180,"width":250,"height":60,"type":"text","text":"Hello"}
-	],
-	"edges":[
-		{"id":"8121133dfec81b8e","fromNode":"e3b0588c45687888","fromSide":"right","toNode":"bbe9d3f90d331f82","toSide":"left"}
-	]
-}
