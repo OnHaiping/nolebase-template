@@ -888,7 +888,7 @@ client.on("message", (topic, message) => {
 ### 7 断开MQTT连接
 
 ```js
-client?.end(true, error => {});
+client.end(true, error => {});
 client = null;
 ```
 
