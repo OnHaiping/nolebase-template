@@ -139,11 +139,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "数学笔记/各种需要记忆的结论.md"
-              },
+              "state": {},
               "icon": "lucide-list",
-              "title": "各种需要记忆的结论 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -178,7 +176,7 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "3e0b950f6d9f21e5",
+  "active": "fda8048a3d373532",
   "lastOpenFiles": [
     "数学笔记/导数的应用.md",
     "数学笔记/关于导数、极小值、极大值、拐点之间的关系.md",
