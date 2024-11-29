@@ -15,7 +15,7 @@ hero:
       link: /笔记/index
     - theme: alt
       text: 我的协会网站
-      link: https://bhchuangxin.site
+      link: http://bhchuangxin.site
     - theme: alt
       text: GitHub主页
       link: https://github.com/onhaiping
