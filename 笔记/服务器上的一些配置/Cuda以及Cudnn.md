@@ -8,3 +8,4 @@ comment: true
 nvidia-smi
 ```
 
+安装 cuda ：
