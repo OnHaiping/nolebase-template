@@ -60,3 +60,31 @@ rm -rf <miniconda_install_dir>
 > [!important]
 > 慎用此命令，确保路径是正确的。
 
+### 配置环境变量
+
+如果出现 `bash: conda: command not found`。那就是环境变量有问题。
+
+用下面的指令配置环境变量：
+
+#### 编辑配置文件
+
+```
+vim ~/.bashrc
+```
+
+#### 文末添加 conda 路径
+
+```
+export PATH=<conda_install_dir>/bin:$PATH
+```
+
+打开文件后按i进入编辑模式，按Esc退出编辑模式，shift+冒号然后输入wq 保存文件并退出.
+
+#### 激活环境变量
+
+```
+source ~/.bashrc
+```
+
+可能需要重开一个 ssh 链接才会生效。
+
