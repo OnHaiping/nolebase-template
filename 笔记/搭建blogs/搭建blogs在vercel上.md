@@ -23,10 +23,12 @@ comment: true
 # 开始
 ## git到本地仓库
 
-如果你跟我一样嫌麻烦，直接就去[这个链接](https://github.com/Jackiexiao/nolebase-template)Fork一份到自己的GitHub仓库
+如果你跟我一样嫌麻烦，直接就去[这个链接](https://github.com/Jackiexiao/nolebase-template) Fork一份到自己的GitHub仓库
+
 ![|750](imgs/Pasted%20image%2020240913184657.png)
 
 然后在自己的本地拉取到一个文件夹下面
+
 ![|475](imgs/Pasted%20image%2020240913185447.png)
 
 这样一来，就能在本地使用VScode进行修改了，可以修改的地方在下面：
@@ -39,7 +41,11 @@ comment: true
 >首先是换链接，这个链接的位置在**metadata/index.ts**中的第12行，需要将这个链接换成你得任何可以共享的链接地址，我设置的是Instagram的个人链接。
 >其次是换图标，这个一度折磨我，因为之间从来没有接触过类似的框架，并且这个框架还是基于vitePress的。
 >这个位置不太好找，在 **.vitepress/theme/config.ts**中的137行，不知道别的图标是否能直接显示，Instagram的图标只需将 **icon**后面的换成 **instagram** 就可以了，如下图：
+> 
+> 
 >![|425](imgs/Pasted%20image%2020240913191127.png)  
+> 
+> 
 >我也没有弄清楚这个列表所支持的图标有多少，如果你找到了，请在评论区告诉我，感谢。
   
   PS:有时间可以学一下VitePress这个框架，或许会有新的收获
@@ -49,6 +55,7 @@ comment: true
 去vercel的网站注册一个账号：[Vercel](https://vercel.com/),
 然后选择github上刚才Fork的仓库
 不过需要注意的是，下图中的这个地方需要修改：
+
 ![](imgs/Pasted%20image%2020240913194304.png)
 
 ```
@@ -89,16 +96,24 @@ Output Directory : .vitepress/dist
 
 购买完成之后需要来cloudflare进行注册，[CloudFlare](https://www.cloudflare.com/zh-cn/)
 完成之后进来会看到如下界面
+
 **![](imgs/Pasted%20image%2020240913211446.png)
 
 然后点击右侧的这个**添加站点**按钮就好了，进入下一步，输入你要加的域名
 然后点击**继续**：
+
 ![](imgs/Pasted%20image%2020240913211706.png)
+
 然后选择计划，一般无特殊需求直接白嫖然后点击继续：
+
 ![](imgs/Pasted%20image%2020240913211736.png)
+
 接下来 Cloudflare 会自动扫描你的部分dns记录。我这个域名是刚刚买的还没有进行一些解析的操作，所以是没有记录的。点击继续：
+
 ![](imgs/Pasted%20image%2020240913211807.png)
+
 **然后最关键的点来了，Cloudflare会自动生成两条dns地址，就是下面两个云右边的字符串，你得拿着这两个地址去换掉华为云原本的解析**：
+
 ![](imgs/Pasted%20image%2020240913212533.png)
 ### 在华为云域名管理控制台更改DNS服务器解析
 
@@ -107,6 +122,7 @@ Output Directory : .vitepress/dist
 找到你购买的域名，然后点击进入查看这个**域名信息**
 
 然后点击下面的修改
+
 ![](imgs/Pasted%20image%2020240913212334.png)
 
 将上面Cloudflare中的信息填写到里面来，保存然后等待dns缓存刷新即可，这可能需要1-24小时因为每个域名体质不一样。
@@ -115,23 +131,31 @@ Output Directory : .vitepress/dist
 
 ### 在Vercel上为自己部署好的前端应用添加新的域名解析
 
+
 #### 去cloudflare添加域名解析记录
 
-在 Cloudflare 添加`CNAME`类型的解析，比如这个项目就是把我们的域名重定向到vercel的项目上，并打开 proxy 服务。我在这边为了对应根路径访问和www访问，两个都加上了。
+在 Cloudflare 添加 `CNAME` 类型的解析，比如这个项目就是把我们的域名重定向到vercel的项目上，并打开 proxy 服务。我在这边为了对应根路径访问和www访问，两个都加上了。
+
 ![](imgs/Pasted%20image%2020240913213011.png)
+
 记得将内容换成自己的地址。
 
 #### 回到Vercel
 
 进入到部署好了的项目的主页，可以看到一个“Domain”的按钮，点击进入：
+
 ![](imgs/Pasted%20image%2020240913213123.png)
+
 然后进入之后，输入你买好的域名然后点击Add：
+
 ![](imgs/Pasted%20image%2020240913213202.png)
+
 选择默认的方案，也就是把根域名和`www`解析一起加上。
 
 #### 设置SSL/TLS
 最后，避免出现重定向次数过多的问题出现，需要修改加密方式
 进入 Cloudflare Dashboard，点击有问题的域名，打开左侧的 SSL/TLS 设置，在 Overview 中设置加密模式为完全或完全（严格）即可。
+
 ![](imgs/Pasted%20image%2020240913213501.png)
 
 ## 大功告成，开始写作吧
