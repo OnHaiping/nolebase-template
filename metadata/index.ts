@@ -12,6 +12,6 @@ export const githubRepoLink = 'https://github.com/OnHaiping/nolebase-template'
 export const discordLink = 'https://www.instagram.com/haipingnn/'
 
 /** 无协议前缀域名 */
-export const plainTargetDomain = 'haipingblogs.top'
+export const plainTargetDomain = 'notes.hipeace.top'
 /** 完整域名 */
 export const targetDomain = `https://${plainTargetDomain}`
