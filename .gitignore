@@ -9,6 +9,7 @@
 
 # Obsidian
 
+
 **/.obsidian/*
 !**/.obsidian/workspace*
 !**/.obsidian/graph*
