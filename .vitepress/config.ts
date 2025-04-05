@@ -135,7 +135,7 @@ export default defineConfig({
     footer: {
       message: '用 <span style="color: #e25555;">&#9829;</span> 撰写',
       copyright:
-        '<a class="footer-cc-link" target="_blank" href="https://www.gnu.org/licenses/gpl-3.0-standalone.html">GNU GENERAL PUBLIC 4.0</a> © 2022-PRESENT FROM haiping',
+        '<a class="footer-cc-link" target="_blank" href="https://www.gnu.org/licenses/gpl-3.0-standalone.html">GNU GENERAL PUBLIC 3.0</a> © 2022-PRESENT FROM haiping',
     },
     search: {
       provider: 'local',
