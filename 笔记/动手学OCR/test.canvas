@@ -1,0 +1,14 @@
+{
+	"nodes":[
+		{"id":"5005840399e7d463","x":-60,"y":10,"width":130,"height":60,"color":"2","type":"text","text":"目标跟踪"},
+		{"id":"c79e645a0cddc344","type":"text","text":"目标跟踪数据集","x":220,"y":15,"width":180,"height":50},
+		{"id":"5a5ff04777e51869","type":"text","text":"目标跟踪算法","x":220,"y":-95,"width":180,"height":50},
+		{"id":"c2d1c83ff83a2062","type":"text","text":"评估指标","x":220,"y":125,"width":180,"height":50},
+		{"id":"d589cf29895eca1f","x":503,"y":-183,"width":250,"height":60,"type":"text","text":"传统算法\n深度学习算法\n算法特点对比\n单目标跟踪\n多目标跟踪\n数据集特点"}
+	],
+	"edges":[
+		{"id":"b6f7b64e03663dae","fromNode":"5005840399e7d463","fromSide":"right","toNode":"5a5ff04777e51869","toSide":"left"},
+		{"id":"f9419597c6735526","fromNode":"5005840399e7d463","fromSide":"right","toNode":"c79e645a0cddc344","toSide":"left"},
+		{"id":"26e14334412618ac","fromNode":"5005840399e7d463","fromSide":"right","toNode":"c2d1c83ff83a2062","toSide":"left"}
+	]
+}
