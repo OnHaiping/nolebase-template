@@ -22,6 +22,10 @@ cd /miniconda
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 ```
 
+或者直接去官网找其他版本的 conda：
+
+[官网连接](https://repo.anaconda.com/)
+
 ### 安装 miniconda
 
 ```

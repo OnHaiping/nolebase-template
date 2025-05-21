@@ -15,7 +15,7 @@ hero:
       link: /笔记/index
     - theme: alt
       text: 我的协会网站
-      link: https://web.openctia.site
+      link: https://openctia.site
     - theme: alt
       text: GitHub主页
       link: https://github.com/onhaiping
