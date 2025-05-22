@@ -152,8 +152,8 @@ Yaml 文件配置如下：
 AliyunData:  
   # 阿里云的AccessKey_ID , Access_Key_Secret , region_id  
   # 获取方法，参考文档: https://help.aliyun.com/knowledge_detail/38738.html  
-  AccessKey_ID: 'LTAI5tPY8Znv9WxPp57QhDNK'  
-  Access_Key_Secret: 'EL7uXLfFqsucQ4S5VGEvHq5qezCQza'  
+  AccessKey_ID: 'ID'  
+  Access_Key_Secret: 'Key'  
   region_id: "cn-shanghai"  
   
 # DNS解析信息  
