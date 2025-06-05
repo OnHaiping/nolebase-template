@@ -4,7 +4,13 @@
 
 查看运行状态
 
-```powershell
+```Shell
 systemctl status renzheng.service
+```
+
+设置开机自启动
+
+```Shell
+systemctl enable renzheng.service
 ```
 
