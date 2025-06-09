@@ -2,6 +2,25 @@
 tags: 
 comment: true
 ---
+> [!important]
+> 注意，目前在树莓派 4 b 上使用 `root` 安装 `miniconda`，会导致 `Illegal instruction` 的错误，解决方法是替换 `/usr/lib/libcrypto.so.1.1`，但是此方法治标不治本，建议以后的树莓派上不使用 `root` 安装 `miniconda`，或者一律安装 `Anaconda`
+> 
+> 在安装 Anaconda 之后，在基础 base 环境中是没有问题的，但是如果创建新的虚拟环境，依然会遇到此错误。
+> 
+> 目前发现的解决方案是：
+> 
+> ```Shell
+> wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh -O ~/miniforge.sh
+> bash ~/miniforge.sh -b -p ~/miniforge
+> 
+> echo "PATH=$PATH:$HOME/miniforge/bin" >> .bashrc
+> 
+> ```
+> 
+> 然后 conda init
+> 
+> 解决方案来自于[elejke](https://gist.github.com/elejke/3437be39478c66a3efac26700cb14334)
+
 ## Minicoda
 ### 服务器上创建文件夹
 
@@ -93,4 +112,5 @@ source ~/.bashrc
 ```
 
 可能需要重开一个 ssh 链接才会生效。
+
 
