@@ -1,7 +1,10 @@
 ---
 tags: 
 comment: true
+time:
 ---
+## 创建服务
+
 首先创建服务文件 `.service`
 
 ```bash
@@ -41,7 +44,7 @@ sudo systemctl start coder
 sudo systemctl enable coder
 ```
 
-常用的管理命令
+## 常用的管理命令
 
 ```bash
 # 查看服务状态
@@ -56,3 +59,4 @@ sudo systemctl restart coder
 # 查看服务日志
 journalctl -u coder -f
 ```
+
