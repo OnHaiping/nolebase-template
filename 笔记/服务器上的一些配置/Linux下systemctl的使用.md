@@ -11,25 +11,7 @@ time:
 sudo vim /etc/systemd/system/coder.service
 ```
 
-编写服务配置
-
-```bash
-[Unit]
-Description=Coder Server
-After=network.target
-
-[Service]
-# 替换为实际运行用户（例如 ctia 或你的用户名）
-User=user
-# 替换为 coder 可执行文件的完整路径（可通过 which coder 查看）
-ExecStart=/usr/local/bin/coder server
-Restart=always
-RestartSec=5
-Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-
-[Install]
-WantedBy=multi-user.target
-```
+编写服务配置文件
 
 启动服务并设置开机自启动
 
