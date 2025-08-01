@@ -1,5 +1,8 @@
-
-创建服务文件 `.service`
+---
+tags: 
+comment: true
+---
+首先创建服务文件 `.service`
 
 ```bash
 sudo vim /etc/systemd/system/coder.service
@@ -14,7 +17,7 @@ After=network.target
 
 [Service]
 # 替换为实际运行用户（例如 ctia 或你的用户名）
-User=ctia
+User=user
 # 替换为 coder 可执行文件的完整路径（可通过 which coder 查看）
 ExecStart=/usr/local/bin/coder server
 Restart=always
