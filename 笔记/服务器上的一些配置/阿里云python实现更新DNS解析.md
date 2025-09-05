@@ -23,7 +23,6 @@ from aliyunsdkalidns.request.v20150109.UpdateDomainRecordRequest import UpdateDo
 from aliyunsdkalidns.request.v20150109.AddDomainRecordRequest import AddDomainRecordRequest  
 # from aliyunsdkcore.auth.credentials import AccessKeyCredential  
   
-  
 def AliAccessKey(id, Secret, region):  
     try:  
         client = AcsClient(id, Secret, region)  

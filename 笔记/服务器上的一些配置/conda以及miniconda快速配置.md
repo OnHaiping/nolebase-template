@@ -1,5 +1,5 @@
 ---
-tags: 
+tags:
 comment: true
 ---
 > [!important]
