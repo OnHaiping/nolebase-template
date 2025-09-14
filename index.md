@@ -23,7 +23,7 @@ hero:
 features:
   - details: “人总是在接近幸福时倍感幸福，在幸福进行时却患得患失。” --张爱玲
     icon: <img src="PartyPopper.png" width="40px" height="40px"/>
-  - details: “这个世界没有真相，只有视角。” --尼采
+  - details: <p id="hitokoto">  <a href="#" id="hitokoto_text">:D 获取中...</a></p><script>  fetch('https://v1.hitokoto.cn/?c=h&c=b&c=i&c=d&c=a').then(response => response.json()).then(data => { const hitokoto = document.querySelector('#hitokoto_text') hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}` hitokoto.innerText = data.hitokoto }).catch(console.error)</script>
     icon: <img src="Robot.webp" width="40px" height="40px"/>
   - details: “爱所有人，信任少数人，不负任何人。” --莎士比亚
     icon: <img src="Comet.png" width="40px" height="40px"/>
