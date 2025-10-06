@@ -2,7 +2,7 @@
 
 数据集原本格式如下图所示：
 
-![|293](imgs/Pasted%20image%2020250424110257.png)
+![|293](https://picture-typora.obs.cn-north-4.myhuaweicloud.com/images/Pasted%20image%2020250424110257.png)
 
 使用下面代码将数据集的格式进行转换：
 
@@ -115,7 +115,7 @@ if __name__ == "__main__":
 
 转换之后的数据格式如下：
 
-![|325](imgs/Pasted%20image%2020250424110411.png)
+![|325](https://picture-typora.obs.cn-north-4.myhuaweicloud.com/images/Pasted%20image%2020250424110411.png)
 
 在保证数据集一致的情况下，分别使用yolov11和RT-DETR针对口罩进行识别。
 
@@ -149,27 +149,27 @@ if __name__ == '__main__':
 
 下面是训练过程结果生成的 csv 文件截图为：
 
-![|450](imgs/Pasted%20image%2020250424110828.png)
+![|450](https://picture-typora.obs.cn-north-4.myhuaweicloud.com/images/Pasted%20image%2020250424110828.png)
 
 其中，训练过程各个参数变换为：
 
-![](imgs/Pasted%20image%2020250424110907.png)
+![](https://picture-typora.obs.cn-north-4.myhuaweicloud.com/images/Pasted%20image%2020250424110907.png)
 
 使用训练出来的模型进行预测的结果基本如下：
 
-![](imgs/train_batch2.jpg)
+![](https://picture-typora.obs.cn-north-4.myhuaweicloud.com/images/train_batch2.jpg)
 
-![](imgs/val_batch1_labels.jpg)
+![](https://picture-typora.obs.cn-north-4.myhuaweicloud.com/images/val_batch1_labels.jpg)
 
 可以发现虽然预测结果还行，但是发现还未拟合，可以增多训练轮数。下面从 50 轮提高到 200 轮：
 
 训练出来的结果如下：
 
-![](imgs/Pasted%20image%2020250424111213.png)
+![](https://picture-typora.obs.cn-north-4.myhuaweicloud.com/images/Pasted%20image%2020250424111213.png)
 
 使用 200 轮训练出来的模型进行预测：
 
-![](imgs/Pasted%20image%2020250424111249.png)
+![](https://picture-typora.obs.cn-north-4.myhuaweicloud.com/images/Pasted%20image%2020250424111249.png)
 
 ## RT-DETR
 
@@ -185,15 +185,15 @@ if __name__ == '__main__':
 
 依然采用 50 轮次进行训练，训练过程得到 csv 文件截图如下：
 
-![](imgs/Pasted%20image%2020250424111453.png)
+![](https://picture-typora.obs.cn-north-4.myhuaweicloud.com/images/Pasted%20image%2020250424111453.png)
 
 以及变化曲线图：
 
-![](imgs/results.png)
+![](https://picture-typora.obs.cn-north-4.myhuaweicloud.com/images/results.png)
 
 在此训练结果下，使用该模型进行预测得到的结果如下：
 
-![](imgs/val_batch1_labels%201.jpg)
+![](https://picture-typora.obs.cn-north-4.myhuaweicloud.com/images/val_batch1_labels%201.jpg)
 
 可以发现有部分结果不尽人意，原因在于没有使用预训练模型，同时训练次数过少。
 
@@ -201,17 +201,17 @@ if __name__ == '__main__':
 
 训练过程中得到的 csv 文件的截图如下：
 
-![](imgs/Pasted%20image%2020250424111821.png)
+![](https://picture-typora.obs.cn-north-4.myhuaweicloud.com/images/Pasted%20image%2020250424111821.png)
 
 使用训练出来的模型进行预测的结果基本如下：
 
-![|500](imgs/train_batch2%201.jpg)
+![|500](https://picture-typora.obs.cn-north-4.myhuaweicloud.com/images/train_batch2%201.jpg)
 
 ## 对比 YOLO 11 和 RT-DETR
 
 首先是对比 yolo 11 使用预训练模型与 RT-DETR 不使用预训练模型在 50 epoch 下的结果：
 
-![](imgs/Pasted%20image%2020250424112248.png)
+![](https://picture-typora.obs.cn-north-4.myhuaweicloud.com/images/Pasted%20image%2020250424112248.png)
 
 得到结果发下，RT-DETR 训练结果非常差。针对一些图片不能正确识别出来是否佩戴口罩。
 
@@ -244,12 +244,12 @@ RT-DETR 基于预训练的模型推理时间: 0.37 秒
 
 Yolo 11：
 
-![|400](imgs/484.jpg) 
+![|400](https://picture-typora.obs.cn-north-4.myhuaweicloud.com/images/484.jpg) 
 
 RT-DETR 未使用预训练模型：
 
-![|400](imgs/484%201.jpg)
+![|400](https://picture-typora.obs.cn-north-4.myhuaweicloud.com/images/484%201.jpg)
 
 RT-DETR 使用预训练模型：
 
-![|400](imgs/484%202.jpg)
+![|400](https://picture-typora.obs.cn-north-4.myhuaweicloud.com/images/484%202.jpg)
