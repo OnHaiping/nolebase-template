@@ -2167,6 +2167,8 @@ Eval:
 大概率会换成 `ch_PP-OCRv4_rec.yml`
 
 接下里是基本流程：
+
+$E = mc^2$
 ### 提取 student 模型
 
 ```
